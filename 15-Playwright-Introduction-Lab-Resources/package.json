@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "http-server -a localhost -p 8080 -P http://localhost:8080? -c-1",
-    "test": "playwright test"
+    "test": "playwright test --debug"
 
   },
   "keywords": [],
