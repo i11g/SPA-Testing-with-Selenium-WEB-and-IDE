@@ -174,6 +174,7 @@ namespace IdeaCenterSeleniumTesting
 
             Actions actions = new Actions(driver);
             var view = lastIdea.FindElement(By.XPath(".//a[text()='Delete']"));
+            
             actions.MoveToElement(view).Click().Perform();
             ideas = driver.FindElements(By.CssSelector(".card.mb-4.box-shadow"));
 
