@@ -124,6 +124,71 @@ namespace RevueCradtersSeleniumAutomation_Tests
 
             Assert.That(title, Is.EqualTo(lastCreatedTitle));
         }
+        [Test, Order(4)]
+
+        public void Edit_Last_Created_Revue_Title_Test()
+        {
+            driver.Navigate().GoToUrl($"{baseUrl}/Revue/MyRevues#myRevues");
+            var revues = driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']"));
+            
+            Assert.IsTrue(revues.Count()>0, "The last revue is not present" );
+
+            var lastRevue = revues.Last();
+            actions.MoveToElement(lastRevue).Perform();
+
+            var edit=lastRevue.FindElement(By.XPath(".//a[text()='Edit']"));
+            actions.MoveToElement(edit).Click().Perform();
+
+            var form= driver.FindElement(By.XPath("//form[@class='mx-1 mx-md-4']"));
+            
+            actions.MoveToElement(form).Perform();
+            var editedTitle ="Edited" + lastCreatedTitle;
+            
+            driver.FindElement(By.XPath("//input[@id='form3Example1c']")).Clear();
+            var title = driver.FindElement(By.XPath("//input[@id='form3Example1c']"));
+                title.SendKeys(editedTitle); 
+            driver.FindElement(By.XPath("//button[@class='btn btn-primary btn-lg']")).Click();
+
+            var pageUrl = driver.Url;
+
+            Assert.That(pageUrl, Is.EqualTo($"{baseUrl}/Revue/MyRevues"));
+            
+            revues = driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']"));
+            lastRevue = revues.Last();
+            actions.MoveToElement(lastRevue).Perform();
+
+            var lastEditTitle=lastRevue.FindElement(By.XPath(".//div[@class='text-muted text-center']")).Text;
+
+            Assert.That(lastEditTitle, Is.EqualTo(editedTitle));
+        }
+        [Test, Order(5)] 
+
+        public void Delete_last_Created_Revue_Test()
+        {
+            driver.Navigate().GoToUrl($"{baseUrl}/Revue/MyRevues#myRevues");
+            var revues = driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']"));
+            var revuesBeforeDelation = revues.Count();
+
+            Assert.IsTrue(revues.Count() > 0, "The last revue is not present");
+
+            var lastRevue = revues.Last();
+            actions.MoveToElement(lastRevue).Perform();
+
+            var delete = lastRevue.FindElement(By.XPath(".//a[text()='Delete']"));
+            actions.MoveToElement(delete).Click().Perform();
+
+            var pageUrl = driver.Url;
+
+            Assert.That(pageUrl, Is.EqualTo($"{baseUrl}/Revue/MyRevues"));
+
+            revues = driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']"));
+
+            Assert.That(revuesBeforeDelation, Is.EqualTo(revues.Count()+1));
+            lastRevue = revues.Last();
+            var lasttitle = lastRevue.FindElement(By.XPath(".//div[@class='text-muted text-center']")).Text;
+
+            Assert.That(lasttitle, Is.Not.EqualTo(lastCreatedTitle));
+        }
 
         private string GenerateRandomString(int length)
         {
