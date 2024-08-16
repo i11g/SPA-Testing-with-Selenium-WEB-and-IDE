@@ -1,0 +1,200 @@
+{
+  "id": "e79f059c-4cc1-4178-bb15-536775377cf6",
+  "version": "2.0",
+  "name": "MovieCatalogSeleniumIDE_Tests",
+  "url": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/  ",
+  "tests": [{
+    "id": "0ea9387b-9e77-48e0-983c-5c1ab30e7744",
+    "name": "1.1 Landing Page Navigation Test",
+    "commands": [{
+      "id": "c94806b0-8f3d-4446-a8af-4ec97235ba53",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26536ada-5974-4fd6-82d0-457a42a63cd5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1952x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8846418b-0878-4b20-b4c1-e5297e13534a",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Movie Catalog",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "897bce33-8fcb-475e-b3f3-2ced14e72c95",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='About Us']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e18fa35-b0bf-43a3-8cd6-cc3f853ee26c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Our Services']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e86f930-8fb9-4072-aee3-69ef527566ac",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Register']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "703208f2-67e3-4914-b05f-db6906c33cc4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9d4326a-a306-47dd-b108-c8e8e359d45e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Copyrights']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abb7fe2c-ae75-4518-9b82-c99d817048a9",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f8c911a7-4f46-48fc-90ea-b4de136271af",
+    "name": "1.2 Log In Test ",
+    "commands": [{
+      "id": "3456059a-67d4-4627-8313-2e2cca9c5657",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b3f300d-f838-4934-9c59-63536673aab8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1952x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e18a11b5-45b6-426e-95a3-de5452e9ee4e",
+      "comment": "",
+      "command": "click",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05a03031-ee73-4fcb-95ed-2fddd843b5fd",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@id='loginBtn']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05b05998-d5a6-4e3e-a3c5-002f39ba994c",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='form2Example17']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96cb63fa-5902-4fd2-bad8-a7142863f99c",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='form2Example17']",
+      "targets": [],
+      "value": "iv@test.com"
+    }, {
+      "id": "554fb880-52e6-42e3-834c-fc7efa6dd53b",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='form2Example27']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dea8aa39-9345-489d-8ec8-f8d85571729e",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='form2Example27']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "20949ccf-eaec-4daa-ac09-b2fec2ae0d50",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn warning']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6180c34-b38d-4ca6-84ab-7d7c69e75e4e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class='subheading mb-5']",
+      "targets": [],
+      "value": "WELCOME, PESGG!"
+    }, {
+      "id": "69e44ba9-6129-4c57-8eff-d5c80c4f33ad",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Add Movie']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "990c3f83-aff3-4362-af6d-c318bb3820ed",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='All Movies']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98683b27-2206-4dbd-8cc0-3f9da56fbab4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Watched Movies']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3601a977-2263-4178-9c4e-65dabff024bd",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Watched Movies']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe6d2a48-1875-42f4-baab-c5d0c4a5268a",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='nav-link btn btn-link text-dark js-scroll-trigger']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b16903f-24cf-4992-b440-ebd7c3abe542",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class='subheading mb-5']",
+      "targets": [],
+      "value": "YOUR PERSONALIZED MOVIE SANCTUARY! "
+    }]
+  }],
+  "suites": [{
+    "id": "5483e212-ff87-4bc3-bb80-551a3b2c5cb4",
+    "name": "Movie_Catalog_Selenium_IDE_Tests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0ea9387b-9e77-48e0-983c-5c1ab30e7744"]
+  }],
+  "urls": ["http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/"],
+  "plugins": []
+}
