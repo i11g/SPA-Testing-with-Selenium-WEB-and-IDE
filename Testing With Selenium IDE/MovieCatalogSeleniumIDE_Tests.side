@@ -186,6 +186,136 @@
       "targets": [],
       "value": "YOUR PERSONALIZED MOVIE SANCTUARY! "
     }]
+  }, {
+    "id": "32877a09-8140-40a3-a2e1-57e806520833",
+    "name": "1.3 Edit Profile Test ",
+    "commands": [{
+      "id": "bcb68b5d-0467-4cdf-bfda-851c7c90a110",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a99d282-7015-43b5-aea3-3e20a096e9a6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1952x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1269c24-36b8-44fb-9c2f-118612b9cb29",
+      "comment": "",
+      "command": "click",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c87e093-1605-419f-8416-310f10ca8073",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@id='loginBtn']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "427bee04-58ce-4440-b647-265e10d704be",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='form2Example17']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90835b18-c4e4-499a-8e89-1c273859e514",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='form2Example17']",
+      "targets": [],
+      "value": "iv@test.com"
+    }, {
+      "id": "16f4925b-66d4-434a-89dc-afdd09f06928",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='form2Example27']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43aa4905-460d-4746-a666-32a209e28060",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='form2Example27']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "497d2a52-4255-494b-a447-2ff62099ec62",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn warning']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ede58589-0a6d-4677-95ac-deb6d75c3dfe",
+      "comment": "",
+      "command": "click",
+      "target": "//img[@class='img-fluid img-profile rounded-circle mx-auto mb-2']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fe1e72a-50b2-47b1-8117-9683014357c8",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@class='btn btn-light btn-rounded btn-block btn-lg']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f99e1d0-f47f-4df2-b65e-0986524241ae",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='FirstName']",
+      "targets": [],
+      "value": "New First Name"
+    }, {
+      "id": "c77cf7a3-c4d0-4f08-97cf-5a05506da252",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='LastName']",
+      "targets": [],
+      "value": "New Last Name"
+    }, {
+      "id": "977931b2-bf1e-47aa-aeb7-1b4d14309bfd",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn warning']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0386129-e240-4822-a344-85a57e6334ce",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class='card-body p-4 text-black']//h6",
+      "targets": [],
+      "value": "NEW FIRST NAME NEW LAST NAME"
+    }, {
+      "id": "71b4c0f7-d1b6-44c8-b6d6-dc85f966c0ee",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='nav-link btn btn-link text-dark js-scroll-trigger']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc964a10-847e-4a54-afa4-d9d173d8b9f7",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3041f98-7db9-41c9-8655-72bdb011e32f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "5483e212-ff87-4bc3-bb80-551a3b2c5cb4",
@@ -193,7 +323,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["0ea9387b-9e77-48e0-983c-5c1ab30e7744"]
+    "tests": ["0ea9387b-9e77-48e0-983c-5c1ab30e7744", "f8c911a7-4f46-48fc-90ea-b4de136271af"]
   }],
   "urls": ["http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/"],
   "plugins": []
