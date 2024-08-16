@@ -85,7 +85,9 @@ namespace Movie_Catalog_Selenium_Tests
             lastMovieTitle = GenerateRandomString(5);
             lastMovieDescription = GenerateRandomString(10);
             driver.Navigate().GoToUrl($"{BaseUrl}Catalog/Add");
+            driver.FindElement(By.XPath("//input[@name='Title']")).Clear();
             driver.FindElement(By.XPath("//input[@name='Title']")).SendKeys(lastMovieTitle);
+            driver.FindElement(By.XPath("//textarea[@name='Description']")).Clear();
             driver.FindElement(By.XPath("//textarea[@name='Description']")).SendKeys(lastMovieDescription);
             var buttonAdd = driver.FindElement(By.XPath("//button[@class='btn warning']"));
             actions.MoveToElement(buttonAdd).Click().Perform();
@@ -97,11 +99,85 @@ namespace Movie_Catalog_Selenium_Tests
             var moviesAdded= driver.FindElements(By.CssSelector(".col-lg-4"));
             var lastMovie=moviesAdded.Last();
 
-            var titleLast = lastMovie.FindElement(By.XPath("h2"));
+            var titleLast = lastMovie.FindElement(By.CssSelector("h2"));
 
             Assert.That(titleLast.Text.Trim(), Is.EqualTo(lastMovieTitle), "last movie title was not correct");
 
         }
+
+        [Test, Order(4)]
+        public void Edit_Last_Added_Movie_Test()
+        {
+            driver.Navigate().GoToUrl($"{BaseUrl}Catalog/All");
+            var pages = driver.FindElements(By.XPath("//a[@class='page-link']"));
+            var lastPage = pages.Last();
+            lastPage.Click();
+
+            var moviesAdded = driver.FindElements(By.XPath("//div[@class='col-lg-4']"));
+            var lastMovie = moviesAdded.Last();
+
+            var editLast = lastMovie.FindElement(By.XPath(".//a[text()='Edit']"));
+            editLast.Click();
+
+            lastMovieTitle ="EDITED"+lastMovieTitle;
+            driver.FindElement(By.XPath("//input[@name='Title']")).Clear();
+            driver.FindElement(By.XPath("//input[@name='Title']")).SendKeys(lastMovieTitle);            
+            var buttonEdit=driver.FindElement(By.XPath("//button[@class='btn warning']"));
+            actions.MoveToElement(buttonEdit).Click().Perform();
+            
+            var editMessage = driver.FindElement(By.XPath("//div[@class='toast-message']")).Text;
+
+            Assert.That(editMessage, Is.EqualTo("The Movie is edited successfully!"), "The movie was not edited successfully");
+        }
+        [Test, Order(5)]
+        public void Mark_Last_Movie_As_Watched_Test()
+        {
+            driver.Navigate().GoToUrl($"{BaseUrl}Catalog/All");
+            var pages = driver.FindElements(By.XPath("//a[@class='page-link']"));
+            var lastPage = pages.Last();
+            lastPage.Click();
+
+            var moviesAdded = driver.FindElements(By.XPath("//div[@class='col-lg-4']"));
+            var lastMovie = moviesAdded.Last();
+
+            var markAsWatchedLast = lastMovie.FindElement(By.XPath(".//a[@class='btn btn-info']"));
+            markAsWatchedLast.Click();
+
+            driver.Navigate().GoToUrl($"{BaseUrl}Catalog/Watched");
+
+            pages = driver.FindElements(By.XPath("//a[@class='page-link']"));
+            lastPage = pages.Last();
+            lastPage.Click();
+
+            moviesAdded = driver.FindElements(By.XPath("//div[@class='col-lg-4']"));
+            lastMovie = moviesAdded.Last();
+
+            var lastTtile = lastMovie.FindElement(By.XPath(".//h2")).Text.Trim();
+
+            Assert.That(lastTtile, Is.EqualTo(lastMovieTitle), "The movie was not mark as watched successfully");
+        }
+        [Test, Order(6)]
+        public void Delete_Last_Movie_Test()
+        {
+            driver.Navigate().GoToUrl($"{BaseUrl}Catalog/All");
+            var pages = driver.FindElements(By.XPath("//a[@class='page-link']"));
+            var lastPage = pages.Last();
+            lastPage.Click();
+
+            var moviesAdded = driver.FindElements(By.XPath("//div[@class='col-lg-4']"));
+            var lastMovie = moviesAdded.Last();
+            var deleteButton = lastMovie.FindElement(By.XPath(".//a[text()='Delete']"));
+            deleteButton.Click();
+
+            
+            driver.FindElement(By.XPath("//button[@class='btn warning']")).Click();
+
+            var deleteMessage = driver.FindElement(By.XPath("//div[@class='toast-message']")).Text;
+
+            Assert.That(deleteMessage, Is.EqualTo("The Movie is deleted successfully!"), "The movie was not deleted successfully");
+
+        }
+
 
         private string GenerateRandomString(int length)
         {
