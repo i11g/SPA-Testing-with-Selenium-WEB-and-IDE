@@ -1,0 +1,84 @@
+{
+  "id": "c8ec1001-9f06-4a00-aeef-87a87f39a9b3",
+  "version": "2.0",
+  "name": "MovieCatalogSelenium_IDE_Tests",
+  "url": "http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/  ",
+  "tests": [{
+    "id": "005e0f2e-8d0b-4cce-b5d0-072c2cc89552",
+    "name": "1.1. Landing Page Navigation Test",
+    "commands": [{
+      "id": "93596476-6dd0-40c9-8424-2f33e1067cc5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05b82d33-51e8-4312-98b0-c98260bc610b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1950x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ede795d4-e05f-4ab9-a7de-e8afb9dc6782",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Movie Catalog",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2607b533-e1b9-4c3e-ac95-51952b7b7ebc",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='About Us']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbd2587e-e792-4b18-a70e-c6ada3eae908",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Our Services']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed346005-162c-453f-8dfb-6b2fd13a615c",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72a8cbff-67a9-4a43-932c-cd45f1f66c65",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Copyrights']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1169c2fc-baa1-4fbe-b0ec-a29ca27b9f56",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='About Us']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ae831c1-fd35-48d7-a582-b318e3bb5368",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8b2fa591-b06e-4029-922f-a5e39cb98083",
+    "name": "MovieCatalogSeleniumSuiteTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["005e0f2e-8d0b-4cce-b5d0-072c2cc89552"]
+  }],
+  "urls": ["http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/"],
+  "plugins": []
+}
