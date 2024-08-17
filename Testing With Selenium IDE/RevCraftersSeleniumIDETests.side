@@ -1,0 +1,84 @@
+{
+  "id": "70523964-6398-4465-b263-7059e95c9948",
+  "version": "2.0",
+  "name": "RevCraftersSeleniumIDETests",
+  "url": "https://d3s5nxhwblsjbi.cloudfront.net/  ",
+  "tests": [{
+    "id": "5d8b7847-8784-48c6-84b8-f71951a7851e",
+    "name": "1.1 Home Page Navigation Test",
+    "commands": [{
+      "id": "76f2b8cd-0a4f-4032-981c-077ae701be48",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "480b14e3-8380-4440-b202-93dc84268d04",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1950x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb3dd6b3-8d38-4256-a106-4fd6d7985450",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "RevueCrafters",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78d2b317-1d7c-4446-8e88-1a1b8c0040b0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Home']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57dacdc3-8b1d-4c7e-9fae-40fc774f8b7f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='About']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac7bfb15-fa95-44c1-8921-f6ae8c24671e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Services']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a105fb2d-7d06-4af7-a73b-6f68d8f814d1",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Register']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e3214a7-0ddf-4eaf-a10f-7384e3918a92",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4e09510-ef52-4051-9bec-3fd48d3937f2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e1271f81-2952-4970-8ec7-1ba9c171dab2",
+    "name": "RevueCraftersAutoTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5d8b7847-8784-48c6-84b8-f71951a7851e"]
+  }],
+  "urls": ["https://d3s5nxhwblsjbi.cloudfront.net/"],
+  "plugins": []
+}
