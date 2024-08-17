@@ -186,6 +186,101 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "c2aa3fed-b50b-4ed4-8196-a0ac236172ef",
+    "name": "1.3 Verify  Profile Test",
+    "commands": [{
+      "id": "7d8ac51a-1e8e-4b09-89da-bb1f4eb1defb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "018244d2-7fc0-49b0-b007-b9f6c3d78aab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1950x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b49a4863-7bb4-4296-b304-d1e16081dcc2",
+      "comment": "",
+      "command": "click",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ae46cb2-8bab-4885-8c84-6376e53f3365",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='form3Example3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4f2b825-c2f9-42f5-989b-2f805a1ac5cc",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='form3Example3']",
+      "targets": [],
+      "value": "iv@test.com"
+    }, {
+      "id": "f89b2428-e1d0-4066-b432-ccc4aea2e813",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='form3Example4']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa717a4c-e74c-4ef2-bc8b-35dbc9ddc2ac",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='form3Example4']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "4aaddde0-ef23-4393-a739-5499fcda273d",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn btn-primary btn-block mb-4']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a77f600e-651c-49d4-a580-6977e827dd4f",
+      "comment": "",
+      "command": "click",
+      "target": "//a[text()='Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8bd746e-8a35-47ea-b4e1-3ed7b1acf22a",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class='ms-3']//h5",
+      "targets": [],
+      "value": "iv1"
+    }, {
+      "id": "e4f7d0b6-5b4f-43e4-8770-5d41d5ef7716",
+      "comment": "",
+      "command": "click",
+      "target": "//a[text()='Logout']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "323ecf31-ceaf-4b85-9a92-51a4b00d6e17",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Register']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c73df962-aea0-4198-a9a4-8684413602ad",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "e1271f81-2952-4970-8ec7-1ba9c171dab2",
