@@ -1,0 +1,63 @@
+{
+  "id": "8691cfda-25b7-4f13-8547-3630eefdf7a7",
+  "version": "2.0",
+  "name": "IdeaAppAeleniumIDE",
+  "url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:83  ",
+  "tests": [{
+    "id": "074c00a6-11ae-47e6-aa13-82312072a116",
+    "name": "1.2 Home Page Navigation Test",
+    "commands": [{
+      "id": "5e5c692a-bd9d-47e0-9b84-6595407a87be",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81793f32-9849-4db9-8e77-b40e849e612a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1950x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47a3164b-a04d-42e5-a11f-aae090794454",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Home Page - IdeaCenter.WebApp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41c6c5f0-4bb2-4c01-a3c9-20f6b590f5a0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@class='btn btn-primary me-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2f4c52f-8779-402a-bb5c-e82044529541",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@class='btn btn-primary me-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0da794d5-d73a-4588-a33a-fc487de75213",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9f3ed822-895f-4855-a5ce-641653808010",
+    "name": "IdeaAppSeleniumAutoTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["074c00a6-11ae-47e6-aa13-82312072a116"]
+  }],
+  "urls": ["http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:83/"],
+  "plugins": []
+}
