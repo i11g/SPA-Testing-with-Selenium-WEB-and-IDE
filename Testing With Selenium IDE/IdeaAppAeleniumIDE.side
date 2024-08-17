@@ -49,6 +49,252 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "7ab318bd-29b4-4633-861c-1fdf48972da7",
+    "name": "1.2 Login Test",
+    "commands": [{
+      "id": "45c772b5-4627-44ec-9e1a-96cf446d2a13",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cda51d9c-f1e8-4e50-9d52-d0da50061711",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1950x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa791a0f-00f4-4bf6-8df9-eb7ba1b4f313",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@class='btn btn-outline-info px-3 me-2']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81638ea1-b46d-41ef-a1ca-79181de6865b",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@name='Email']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36125b0d-e6be-4795-ac30-bc43b83c3432",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='Email']",
+      "targets": [],
+      "value": "iv11@test.com"
+    }, {
+      "id": "5bae246f-b3b7-4946-9c4b-01e522c961c5",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='Password']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "873c7171-ba29-4bde-9efb-031d623c92b3",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn btn-primary btn-lg btn-block']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5776c8f0-da62-440b-863e-70799c2b766f",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='My Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af757fef-8b66-4f1c-aee7-937a3ef383c6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='My Ideas']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de8707b6-6493-445a-90d4-25b7d3b95164",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Create Idea']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0abdba55-2f0f-42ad-8279-683922bbc9b4",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@class='btn btn-primary me-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a9cb5e6-a807-45d2-911c-9f4e4d86edd0",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@class='btn btn-primary me-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e2d0463-2790-433e-867f-a8da13c18737",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@class='btn btn-primary me-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "167106d7-b1b4-4541-b712-7c723381733f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "57d6cf39-a0ae-44b4-b439-3fca76328b83",
+    "name": "1.3 Edit Profile test",
+    "commands": [{
+      "id": "c5f2dc5e-60fb-4a66-9cf6-589022c3e5f5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc576381-560f-48a9-86b8-8d9da10a9bec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1950x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d9b2e81-c282-4905-865e-5996fdc4ff0a",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@class='btn btn-outline-info px-3 me-2']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76d8fa53-446b-48c5-b7f8-2dbe8fe99a6b",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@name='Email']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff517153-911f-4984-9eea-4b9659272740",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='Email']",
+      "targets": [],
+      "value": "iv11@test.com"
+    }, {
+      "id": "57b82a04-271e-4da4-bd68-a650d1ee9428",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@name='Password']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "202aa886-709b-4623-8b7a-a4ed64ca4408",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='Password']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "28bd8dca-f5c2-4f73-b200-5639c040e5a5",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn btn-primary btn-lg btn-block']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e730e4f3-5e7a-4833-8e10-8050e82f1f33",
+      "comment": "",
+      "command": "click",
+      "target": "//a[text()='My Profile']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75984f0b-7e1b-4a2b-8a36-a5d612f83a60",
+      "comment": "",
+      "command": "click",
+      "target": "//span[@class='btn btn-outline-dark']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8caaba09-0e35-4384-abae-cbb1d56da4af",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='FirstName']",
+      "targets": [],
+      "value": "New First Name"
+    }, {
+      "id": "0fdfb3a9-f8b5-473a-9012-f0da00614d02",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='LastName']",
+      "targets": [],
+      "value": "New Last Name"
+    }, {
+      "id": "d1c73aad-2cb5-4755-b94b-09c2b48edabb",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='City']",
+      "targets": [],
+      "value": "Kaspichan"
+    }, {
+      "id": "4ba17397-93ec-432d-af77-5e5302939578",
+      "comment": "",
+      "command": "type",
+      "target": "//textarea[@name='About']",
+      "targets": [],
+      "value": "When"
+    }, {
+      "id": "fc1b7a96-6490-4c22-aa2c-56915b8494b1",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn btn-primary btn-lg']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eca7ebb0-aa6d-486e-949f-51909d7a660e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class='ms-3']//p",
+      "targets": [],
+      "value": "New First Name New Last Name , Kaspichan"
+    }, {
+      "id": "7219fcb5-9e25-4fb0-ba07-cb581eff8403",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class='p-4']//p",
+      "targets": [],
+      "value": "When"
+    }, {
+      "id": "65a68090-62ac-4091-957c-5136f62cf452",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@class='btn btn-primary me-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ccb54126-adac-4148-a3fc-8dc845fffcb6",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[@class='btn btn-primary me-3']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d4ce428-a0fa-4004-b7e3-5253dc284352",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "9f3ed822-895f-4855-a5ce-641653808010",
@@ -56,7 +302,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["074c00a6-11ae-47e6-aa13-82312072a116"]
+    "tests": ["074c00a6-11ae-47e6-aa13-82312072a116", "7ab318bd-29b4-4633-861c-1fdf48972da7", "57d6cf39-a0ae-44b4-b439-3fca76328b83"]
   }],
   "urls": ["http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:83/"],
   "plugins": []
