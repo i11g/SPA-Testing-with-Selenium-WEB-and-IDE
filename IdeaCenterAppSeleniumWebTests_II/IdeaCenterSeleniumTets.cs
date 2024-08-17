@@ -143,11 +143,79 @@ namespace IdeaCenterAppSeleniumWebTests_II
 
             actions.MoveToElement(viewButton).Click().Perform();
 
-            var title = driver.FindElement(By.XPath("//div[@id='intro']//h1")).Text;
+            var title = driver.FindElement(By.XPath("//div[@id='intro']//h1")).Text.Trim();
 
             Assert.That(title, Is.EqualTo(editTitle), "The title is not correct");
 
         }
+        [Test, Order(5)]
+
+        public void Edit_Last_Idea_Description_Test()
+        {
+            Assert.That(lastCreatedIdeaTitle, Is.Not.Null, "There is no ideas created");
+
+            driver.Navigate().GoToUrl($"{baseUrl}/Ideas/MyIdeas");
+
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
+            var ideas = wait.Until(driver => driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']")));
+            var lastCreatedIdea = ideas.Last();
+
+            Assert.That(ideas.Count() > 0, "There is no ideas created");
+
+            Actions actions = new Actions(driver);
+
+            var editButton = lastCreatedIdea.FindElement(By.XPath(".//a[text()='Edit']"));
+
+            actions.MoveToElement(editButton).Click().Perform();
+
+            driver.FindElement(By.XPath("//textarea[@id='form3Example4cd']")).Clear();
+            var editDescription = $"Changed title: {lastCreatedIdeaDescription}";
+            driver.FindElement(By.XPath("//textarea[@id='form3Example4cd']")).SendKeys(editDescription);
+            driver.FindElement(By.XPath("//button[@class='btn btn-primary btn-lg']")).Click();
+
+            ideas = wait.Until(driver => driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']")));
+            lastCreatedIdea = ideas.Last();
+
+            var viewButton = lastCreatedIdea.FindElement(By.XPath(".//a[text()='View']"));
+
+            actions.MoveToElement(viewButton).Click().Perform();
+
+            var description = driver.FindElement(By.XPath("//p[@class='offset-lg-3 col-lg-6']"));
+            actions.MoveToElement(description).Perform();
+
+            Assert.That(description.Text.Trim(), Is.EqualTo(editDescription), "The edit description is not correct");
+
+        }
+        [Test, Order(6)]
+
+        public void Delete_Last_Idea_Description_Test()
+        {
+            Assert.That(lastCreatedIdeaTitle, Is.Not.Null, "There is no ideas created");
+
+            driver.Navigate().GoToUrl($"{baseUrl}/Ideas/MyIdeas");
+
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
+            var ideas = wait.Until(driver => driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']")));
+            var lastCreatedIdea = ideas.Last();
+
+            Assert.That(ideas.Count() > 0, "There is no ideas created");
+
+            Actions actions = new Actions(driver);
+
+            var deleteButton = driver.FindElement(By.XPath(".//a[text()='Delete']"));
+            actions.MoveToElement(deleteButton).Click().Perform();
+
+            ideas = wait.Until(driver => driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']")));
+
+            bool isIdeaDeleted = ideas.All(cards => !cards.Text.Contains(lastCreatedIdeaTitle));
+
+            Assert.IsTrue(isIdeaDeleted, "The idea  has  not been deleted");
+
+        }
+
+
         private string GenerateRandomString(int length)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
