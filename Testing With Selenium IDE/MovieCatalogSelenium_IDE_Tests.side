@@ -193,6 +193,136 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "6a73e446-c3d4-40fe-acf4-c429a9a7469c",
+    "name": "1.3 Edit Profile Test ",
+    "commands": [{
+      "id": "f404c388-76d2-447b-89ee-f222791cc997",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58b69f39-ea43-4723-8a46-6d7042919a66",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1950x1082",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "100637f9-bcd6-41bc-9500-3f1298676569",
+      "comment": "",
+      "command": "click",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "760178e1-92e7-441f-9d32-1005e0a482d7",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@id='loginBtn']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "292a6cc7-b86e-460b-9c44-00113b17b6d8",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='form2Example17']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa3c83d0-adb8-4249-b67d-c5b9ad84475f",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='form2Example17']",
+      "targets": [],
+      "value": "iv@test.com"
+    }, {
+      "id": "4d3999a9-997c-4286-9fc0-60e4f8cf00e8",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='form2Example27']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "097d5ae8-f297-4014-ae63-3368dedb648f",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='form2Example27']",
+      "targets": [],
+      "value": "123456"
+    }, {
+      "id": "a349defa-0b03-432c-b7ef-41304c656a33",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn warning']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b0475fa-fce4-4289-9ae3-367d5c8e1135",
+      "comment": "",
+      "command": "click",
+      "target": "//img[@class='img-fluid img-profile rounded-circle mx-auto mb-2']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "685251ee-5f09-4a39-8eb4-8baf89b8bb43",
+      "comment": "",
+      "command": "click",
+      "target": "//a[@class='btn btn-light btn-rounded btn-block btn-lg']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c08f8dc3-d81d-4526-be31-d29ea98486ef",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='FirstName']",
+      "targets": [],
+      "value": "pesho"
+    }, {
+      "id": "eda21405-898c-4b95-8eec-58c909cc062d",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@name='LastName']",
+      "targets": [],
+      "value": "gov"
+    }, {
+      "id": "f964ccc6-e039-4783-b663-e7c15cc472a3",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='btn warning']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fa833ce-78d5-437a-84f7-da7e48aa18d5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "//div[@class='card-body p-4 text-black']//h6",
+      "targets": [],
+      "value": "PESHO GOV"
+    }, {
+      "id": "81d27125-26ac-43d0-aa0e-ccf6f0c1b98c",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@class='nav-link btn btn-link text-dark js-scroll-trigger']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "673c2efc-19d6-4694-adf4-3539840a4795",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//a[text()='Login']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7861b789-525b-4227-9b37-bf012223a3ff",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "8b2fa591-b06e-4029-922f-a5e39cb98083",
@@ -200,7 +330,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["005e0f2e-8d0b-4cce-b5d0-072c2cc89552"]
+    "tests": ["005e0f2e-8d0b-4cce-b5d0-072c2cc89552", "325c2a8c-a1a3-4f5a-80e8-777a145a34db", "6a73e446-c3d4-40fe-acf4-c429a9a7469c"]
   }],
   "urls": ["http://moviecatalog-env.eba-ubyppecf.eu-north-1.elasticbeanstalk.com/"],
   "plugins": []
