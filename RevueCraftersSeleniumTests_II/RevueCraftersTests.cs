@@ -191,6 +191,22 @@ namespace RevueCraftersSeleniumTests_II
 
             Assert.That(title, Is.Not.EqualTo(lastCreatedRevueTitle));
         }
+        [Test, Order(6)]
+
+        public void Search_For_Delete_Last_Revue_Title_Test()
+        {
+            driver.Navigate().GoToUrl($"{BaseUrl}/Revue/MyRevues#myRevues");
+            var search = driver.FindElement(By.XPath("//input[@id='keyword']"));
+            actions.MoveToElement(search).Perform();
+            search.SendKeys(lastCreatedRevueTitle);
+
+            driver.FindElement(By.XPath("//button[@id='search-button']")).Click();
+
+            var text=driver.FindElement(By.XPath("//div[@class='row text-center']//span")).Text.Trim();
+
+            Assert.That(text, Is.EqualTo("No Revues yet!"), "The searh message is not correct");
+
+        }
 
 
 
