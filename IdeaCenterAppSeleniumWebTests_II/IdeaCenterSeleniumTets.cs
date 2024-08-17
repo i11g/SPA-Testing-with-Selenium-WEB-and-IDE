@@ -1,5 +1,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.UI;
 
 namespace IdeaCenterAppSeleniumWebTests_II
  {
@@ -10,6 +12,7 @@ namespace IdeaCenterAppSeleniumWebTests_II
         private static readonly string baseUrl = "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:83";
         private static string lastCreatedIdeaTitle ="";
         private static string lastCreatedIdeaDescription="";
+       
 
         [OneTimeSetUp]
         public void Setup()
@@ -83,12 +86,67 @@ namespace IdeaCenterAppSeleniumWebTests_II
             Assert.That(textDescription, Is.EqualTo(lastCreatedIdeaDescription));
         }
 
-
         [Test, Order(3)]
 
-        public void View_Idea_With_Valid_Data_Test()
+        public void View_Last_Idea_Test()
         {
-            driver.Navigate().GoToUrl($"{baseUrl}/Ideas/Create");
+            Assert.That(lastCreatedIdeaTitle, Is.Not.Null, "There is no ideas created");
+            driver.Navigate().GoToUrl($"{baseUrl}/Ideas/MyIdeas");
+            
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            var ideas =wait.Until(driver=>driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']")));
+            var lastCreatedIdea = ideas.Last();
+
+            Assert.That(ideas.Count() > 0, "There is no ideas created");
+
+            Actions actions = new Actions(driver);
+
+            var viewButton = lastCreatedIdea.FindElement(By.XPath(".//a[text()='View']"));
+            
+            actions.MoveToElement(viewButton).Click().Perform();
+
+            var title = driver.FindElement(By.XPath("//div[@id='intro']//h1")).Text;
+
+            Assert.That(title, Is.EqualTo(lastCreatedIdeaTitle), "The title is not correct");
+
+        }
+        [Test, Order(4)]
+
+        public void Edit_Last_Idea_Test()
+        {
+            Assert.That(lastCreatedIdeaTitle, Is.Not.Null, "There is no ideas created");
+            
+            driver.Navigate().GoToUrl($"{baseUrl}/Ideas/MyIdeas");
+
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+
+            var ideas = wait.Until(driver => driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']")));
+            var lastCreatedIdea = ideas.Last();
+
+            Assert.That(ideas.Count() > 0, "There is no ideas created");
+
+            Actions actions = new Actions(driver);
+
+            var editButton = lastCreatedIdea.FindElement(By.XPath(".//a[text()='Edit']"));
+
+            actions.MoveToElement(editButton).Click().Perform();
+
+            driver.FindElement(By.XPath("//input[@id='form3Example1c']")).Clear();
+            var editTitle = $"Changed title: {lastCreatedIdeaTitle}";
+            driver.FindElement(By.XPath("//input[@id='form3Example1c']")).SendKeys(editTitle);
+            driver.FindElement(By.XPath("//button[@class='btn btn-primary btn-lg']")).Click();
+
+            ideas = wait.Until(driver => driver.FindElements(By.XPath("//div[@class='card mb-4 box-shadow']")));
+            lastCreatedIdea = ideas.Last();
+
+            var viewButton = lastCreatedIdea.FindElement(By.XPath(".//a[text()='View']"));
+
+            actions.MoveToElement(viewButton).Click().Perform();
+
+            var title = driver.FindElement(By.XPath("//div[@id='intro']//h1")).Text;
+
+            Assert.That(title, Is.EqualTo(editTitle), "The title is not correct");
+
         }
         private string GenerateRandomString(int length)
         {
