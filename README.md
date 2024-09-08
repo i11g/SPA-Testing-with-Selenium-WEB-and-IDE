@@ -1,6 +1,5 @@
-# Single Page Application Testing using Selenium Web 
-This repository contains my solutions of the tasks and projects included in Front End Technologies Basics course. 
-
+# Single Page Application Testing using Selenium WebDriver and Selenium IDE 
+This repository contains automated UI tests of three SPA using Selenium WebDriver and Selenium IDE
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -10,17 +9,11 @@ This repository contains my solutions of the tasks and projects included in Fron
 * [License](#license) 
 
 ## General Information
-The course is part of SoftUni QA Automation Program and focus on:
-- Working with basic concepts of HTML and CSS
-- Working with the DOM and handling events
-- Working with basic concepts of the JavaScript language
-- Java Script async functions and promises
-- Test management with the qUnit 
-- Working with the Playwright
+The repo includes a number of automated UI tests on three different Single Page Applications developed by SoftUni using Selenium WebDriver and Selenium IDE.
+
 
 ## Technologies Used
-- HTML 5, CSS, Java Script
-- QUnit, Playwright 
+- .Net, C#, Selenium WebDriver, Selenium IDE 
 
 ## Acknowledgements
 
