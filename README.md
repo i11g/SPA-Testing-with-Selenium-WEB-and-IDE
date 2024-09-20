@@ -13,7 +13,9 @@ The repo includes a number of automated UI tests on three different Single Page 
 
 
 ## Technologies Used
-- .Net, C#, Selenium WebDriver, Selenium IDE 
+- ASP.Net Core,
+- Selenium WebDriver,
+- Selenium IDE 
 
 ## Acknowledgements
 
